@@ -1,0 +1,25 @@
+{
+  "name": "build-week1",
+  "version": "1.0.0",
+  "description": "user interface",
+  "main": "index.js",
+  "scripts": {
+    "compile": "less-watch-compiler less css index.less --run-once",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diabetes-manager/ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diabetes-manager/ui/issues"
+  },
+  "homepage": "https://github.com/diabetes-manager/ui#readme",
+  "devDependencies": {
+    "less-watch-compiler": "^1.13.0"
+  },
+  "dependencies": {}
+}

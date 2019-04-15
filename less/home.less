@@ -17,7 +17,6 @@
   background-size: cover;
   background-position: center;
   height: 450px;
-  margin-bottom: 40px;
 
   &__title {
     margin: 20px 0;
@@ -30,9 +29,11 @@
   }
 }
 
-.top-upsell-block {
+.top-upsell-container {
+  position: relative;
   display: flex;
   flex-direction: column;
+  // border-bottom: 1px solid @mono-medium;
 
   @media @desktop-up {
     flex-direction: row;
@@ -44,5 +45,37 @@
 
   &--reverse {
     .Upsell(right, left, center);
+
+    &__content {
+      padding-left: 0;
+      padding-right: 15px;
+    }
   }
+
+  @media @desktop-up {
+    .Upsell(top, center, center);
+
+    &--reverse {
+      .Upsell(top, center, center);
+    }
+  }
+}
+
+.how-to-container {
+  flex-direction: column;
+  padding-top: 30px;
+  background: @primary-color;
+  color: @mono-light;
+  font-size: 18px;
+}
+
+.step {
+  .Upsell();
+}
+
+.footer {
+  padding: 20px 0;
+  background: @mono-medium;
+  color: @mono-light;
+  text-align: center;
 }

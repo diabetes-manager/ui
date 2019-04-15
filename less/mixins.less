@@ -28,6 +28,7 @@
   border-radius: 3px;
   display: inline-block;
   text-align: center;
+  transition: all 0.25s ease-in-out;
 
   &:hover:not(&--emphasize) {
     background: fade(@mono-light, 20%);
@@ -38,6 +39,11 @@
     background: @highlight-color;
     font-weight: 600;
     color: @mono-dark;
+
+    &:active {
+      .Materialize(2);
+      transform: translate(-1px);
+    }
 
     @media @desktop-up {
       .Materialize(1);
@@ -52,6 +58,37 @@
         .Materialize(3);
         transform: translateY(-2px);
       }
+    }
+  }
+}
+
+// image: top/left/bottom/right
+// content: left/center/right
+// title: left/center/right
+
+.Upsell(@image: left, @content: left, @title: @content) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  & when (@image = top), (@image = bottom)  {
+    flex-direction: column;
+  }
+
+  &__content {
+    padding: 30px;
+    text-align: @content;
+
+    &__title {
+      margin-bottom: 15px;
+      text-align: @title;
+    }
+  }
+
+  &__image {
+    & when (@image = bottom), (@image = right) {
+      order: 1;
     }
   }
 }

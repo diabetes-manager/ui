@@ -12,11 +12,12 @@
 
 .hero {
   background-image: 
-    linear-gradient(fade(@primary-color, 60%), fade(@primary-color, 80%)),
+    linear-gradient(fade(@primary-color, 70%), fade(@primary-color, 90%)),
     url('../assets/hero-img.jpg');
   background-size: cover;
   background-position: center;
   height: 450px;
+  margin-bottom: 40px;
 
   &__title {
     margin: 20px 0;
@@ -26,5 +27,22 @@
     .Button();
     margin: 40px 0 0;
     border: none;
+  }
+}
+
+.top-upsell-block {
+  display: flex;
+  flex-direction: column;
+
+  @media @desktop-up {
+    flex-direction: row;
+  }
+}
+
+.upsell {
+  .Upsell(left, left, center);
+
+  &--reverse {
+    .Upsell(right, left, center);
   }
 }

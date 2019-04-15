@@ -3,6 +3,11 @@
   flex-direction: column;
   justify-content: center;
   color: @mono-light;
+  font-size: 1.8rem;
+
+  @media @desktop-up {
+    align-items: flex-start;
+  }
 }
 
 .hero {
@@ -19,7 +24,7 @@
 
   &__cta {
     .Button();
-    margin: 40px 0;
+    margin: 40px 0 0;
     border: none;
   }
 }

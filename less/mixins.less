@@ -20,12 +20,14 @@
   }
 }
 
+// TODO: Abstract this
 .Button() {
   padding: 10px 15px;
   color: @mono-light;
   text-decoration: none;
   border-radius: 3px;
   display: inline-block;
+  text-align: center;
 
   &:hover:not(&--emphasize) {
     background: fade(@mono-light, 20%);

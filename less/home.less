@@ -61,16 +61,29 @@
   }
 }
 
-.how-to-container {
-  flex-direction: column;
-  padding-top: 30px;
+.how-to {
   background: @primary-color;
   color: @mono-light;
   font-size: 18px;
 }
 
+.how-to-container {
+  flex-direction: column;
+  padding-top: 30px;
+
+  @media @desktop-up {
+    &__title {
+      text-align: center;
+    }
+  }
+}
+
 .step {
   .Upsell();
+
+  @media @desktop-up {
+    .Upsell(top, center);
+  }
 }
 
 .footer {

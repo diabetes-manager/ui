@@ -13,6 +13,14 @@
     width: 100vw;
     text-align: center;
     font-size: 3rem;
+
+    @media @desktop-up {
+      width: 60%;
+    }
+  }
+
+  @media @desktop-up {
+    flex-direction: row;
   }
 }
 
@@ -40,7 +48,26 @@
       background: @highlight-color;
       font-weight: 600;
       color: @mono-dark;
+
+      @media @desktop-up {
+        .Materialize(1);
+        transition: all 0.25s cubic-bezier(0.25, 0.80, 0.25, 1.00);
+
+        &:hover {
+          .Materialize(2);
+          transform: translateY(-1px);
+        }
+
+        &:active {
+          .Materialize(3);
+          transform: translateY(-2px);
+        }
+      }
     }
+  }
+
+  @media @desktop-up {
+    width: 40%;
   }
 }
 

@@ -1,0 +1,25 @@
+.hero-container {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  color: @mono-light;
+}
+
+.hero {
+  background-image: 
+    linear-gradient(fade(@primary-color, 60%), fade(@primary-color, 80%)),
+    url('../assets/hero-img.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+
+  &__title {
+    margin: 20px 0;
+  }
+
+  &__cta {
+    .Button();
+    margin: 40px 0;
+    border: none;
+  }
+}

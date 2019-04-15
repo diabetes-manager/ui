@@ -1,32 +1,3 @@
-/**
- * A mixin which helps you to add depth to elements according to the Google Material Design spec:
- * http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality
- *
- * Please note that the values given in the specification cannot be used as is. To create the same visual experience
- * the blur parameter has to be doubled.
- *
- * Author: Florian Kutschera (@gefangenimnetz), Conceptboard GmbH (@conceptboardapp)
- *
- * Example usage:
- *
- * .card {
- *     width: 95px;
- *     height: 95px;
- *     background: #f4f4f4;
- *     -webkit-transition: all 250ms;
- *     -moz-transition: all 250ms;
- *     transition: all 250ms;
- *     .BoxShadowHelper(1);
- *     &:hover {
- *         .BoxShadowHelper(3);
- *         -webkit-transform: translateY(-5px);
- *         -moz-transform: translateY(-5px);
- *         transform: translateY(-5px);
- *     }
- * }
- *
- */
-
 .Materialize(@level: 1) {
   & when (@level = 1) {
     box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -46,5 +17,39 @@
 
   & when (@level = 5) {
     box-shadow: 0 19px 76px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+}
+
+.Button() {
+  padding: 10px 15px;
+  color: @mono-light;
+  text-decoration: none;
+  border-radius: 3px;
+  display: inline-block;
+
+  &:hover:not(&--emphasize) {
+    background: fade(@mono-light, 20%);
+  }
+
+  &--emphasize {
+    font-size: 1.8rem;
+    background: @highlight-color;
+    font-weight: 600;
+    color: @mono-dark;
+
+    @media @desktop-up {
+      .Materialize(1);
+      transition: all 0.25s cubic-bezier(0.25, 0.80, 0.25, 1.00);
+
+      &:hover {
+        .Materialize(2);
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        .Materialize(3);
+        transform: translateY(-2px);
+      }
+    }
   }
 }

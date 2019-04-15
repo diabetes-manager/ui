@@ -1,0 +1,69 @@
+.header {
+  background: @primary-color;
+  color: @mono-light;
+}
+
+.navigation-container {
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+
+  .logo {
+    width: 100vw;
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+.nav {
+  width: 100vw;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__link {
+    padding: 10px 15px;
+    color: @mono-light;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline-block;
+
+    &:hover:not(&--emphasize) {
+      background: fade(@mono-light, 20%);
+    }
+
+    &--emphasize {
+      font-size: 1.8rem;
+      background: @highlight-color;
+      font-weight: 600;
+      color: @mono-dark;
+    }
+  }
+}
+
+
+/*
+
+Desktop:
+.logo 60%
+.nav 40%
+
+
+emphasize:
+.Materialize(1);
+      transition: all 0.25s cubic-bezier(0.25, 0.80, 0.25, 1.00);
+      position: relative;
+
+      &:hover {
+        .Materialize(2);
+        transform: translateY(-1px);
+
+        &:active {
+          box-shadow: none;
+          transform: translateY(1px);
+        }
+      }
+*/

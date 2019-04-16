@@ -5,6 +5,10 @@
   color: @mono-light;
   font-size: 1.8rem;
 
+  span {
+    line-height: 1.75;
+  }
+
   @media @phone-up {
     width: 75%;
   }
@@ -16,11 +20,7 @@
 }
 
 .hero {
-  background-image: 
-    linear-gradient(fade(@primary-color, 70%), fade(@primary-color, 90%)),
-    url('../assets/hero-img.jpg');
-  background-size: cover;
-  background-position: center;
+  background: @primary-color;
   height: 450px;
 
   &__title {
@@ -31,6 +31,24 @@
     .Button();
     margin: 40px 0 0;
     border: none;
+  }
+
+  .spacer {
+    height: 120px;
+    width: 100%;
+    background: @primary-color;
+  }
+
+  .bg-waves img {
+    display: none;
+
+    @media @desktop-up {
+      display: block;
+    }
+  }
+
+  @media @desktop-up {
+    background: transparent;
   }
 }
 

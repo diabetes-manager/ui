@@ -1,9 +1,12 @@
-# ui
-user interface 
+# User Interface
+User interface section for the diabetes management application.
 
-#Style Guide
-https://company-66966.frontify.com/d/Gg49Aug7MGiL
+## Style Guide
+Created style guide: https://company-66966.frontify.com/d/Gg49Aug7MGiL
 
-# Project Setup
+## Project Setup
 1. CD to project directory
 1. Run less-watch-compiler less css index.less to generate CSS
+
+## Deployment
+Project is deployed at: https://compassionate-bohr-8a7372.netlify.com

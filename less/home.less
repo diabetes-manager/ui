@@ -5,7 +5,12 @@
   color: @mono-light;
   font-size: 1.8rem;
 
+  @media @phone-up {
+    width: 75%;
+  }
+
   @media @desktop-up {
+    width: inherit;
     align-items: flex-start;
   }
 }
@@ -33,18 +38,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // border-bottom: 1px solid @mono-medium;
+  align-items: center;
 
   @media @desktop-up {
     flex-direction: row;
+    margin: 60px auto;
   }
 }
 
 .upsell {
-  .Upsell(left, left, center);
+  .Upsell(left, center);
 
   &--reverse {
-    .Upsell(right, left, center);
+    .Upsell(right, center);
 
     &__content {
       padding-left: 0;
@@ -71,7 +77,12 @@
   flex-direction: column;
   padding-top: 30px;
 
+  @media @phone-up {
+    width: 75%;
+  }
+
   @media @desktop-up {
+    width: inherit;
     &__title {
       text-align: center;
     }
@@ -83,6 +94,16 @@
 
   @media @desktop-up {
     .Upsell(top, center);
+  }
+}
+
+.get-started {
+  .Button();
+  margin-bottom: 40px;
+  
+  @media @desktop-up {
+    align-self: center;
+    width: 30%;
   }
 }
 

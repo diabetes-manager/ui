@@ -28,8 +28,8 @@
   border-radius: 3px;
   display: inline-block;
   text-align: center;
-  transition: all 0.25s ease-in-out;
-
+  transition: background 0.25s ease-in-out;
+  
   &:hover:not(&--emphasize) {
     background: fade(@mono-light, 20%);
   }
@@ -39,6 +39,7 @@
     background: @highlight-color;
     font-weight: 600;
     color: @mono-dark;
+    transition: background 0s ease-in-out;
 
     &:active {
       .Materialize(2);
@@ -47,7 +48,7 @@
 
     @media @desktop-up {
       .Materialize(1);
-      transition: all 0.25s cubic-bezier(0.25, 0.80, 0.25, 1.00);
+      transition: transform 0.25s cubic-bezier(0.25, 0.80, 0.25, 1.00), box-shadow transform 0.25s cubic-bezier(0.25, 0.80, 0.25, 1.00);
 
       &:hover {
         .Materialize(2);
@@ -83,6 +84,10 @@
     &__title {
       margin-bottom: 15px;
       text-align: @title;
+    }
+
+    @media @desktop-up {
+      padding: 15px 15px 0;
     }
   }
 

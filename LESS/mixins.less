@@ -1,0 +1,43 @@
+.custom-button(@width, @height, @color, @background-color) {
+  height: @height;
+  width: @width;
+  background-color: @background-color;
+  color: @color;
+  font-size: 1.8rem;
+  border-radius: 20px;
+  border: 2px solid @background-color;
+
+  @keyframes colorchange {
+		from {border: 2px @background-color;}
+		to {border: 2px solid @color;}
+		from {color: @color;}
+		to {color: @background-color;}
+    from {background-color: @background-color;}
+    to {background-color: @color;}
+	}
+
+  &:hover {
+    cursor: pointer;
+    animation-name: colorchange;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+  }
+
+  @media @tablet {
+    width: 50%;
+  }
+
+  @media @desktop {
+    width: 250px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 2rem;
+  }
+}
+
+.flex(@jc: none, @ai: none, @dir: row) {
+  display: flex;
+  justify-content: @jc;
+  align-items: @ai;
+  flex-direction: @dir;
+}

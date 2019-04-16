@@ -1,0 +1,38 @@
+.footer-container {
+  p {
+    text-align: center;
+    font-size: 13px;
+    line-height: 2.5;
+  }
+
+  footer {
+    background-color:@footer;
+    width: 100%;
+    padding: 10% 5%;
+    .flex(center, none, row);
+    
+  
+
+    nav {
+      .flex(space-between);
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          color: #c9c9c9;
+        }
+      }
+      @media @desktop {
+        width: 85%;
+      }
+    }
+
+    @media @desktop {
+      padding: 20px 5%;
+      justify-content: flex-start;
+    } 
+  }
+}

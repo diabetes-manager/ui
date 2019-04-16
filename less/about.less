@@ -49,7 +49,7 @@
     }
   }
   
-  &[data-tab='front-end-architects']:after {
+  &[data-tab='front-end']:after {
     content: 'FE';
   
     @media @phone-up {
@@ -57,7 +57,7 @@
     }
   }
   
-  &[data-tab='back-end-architects']:after {
+  &[data-tab='back-end']:after {
     content: 'BE';
   
     @media @phone-up {
@@ -94,6 +94,10 @@
       height: 1px;
       background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(2, 2, 7, 0.5) 10%, rgba(0, 0, 0, 0) 100%);
       
+    }
+
+    &--hidden {
+      display: none;
     }
     
     &__info {

@@ -245,7 +245,7 @@ header nav a:hover {
 .container .top-container .top-section p {
   padding: 0 0 20px 0;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 @media (min-width: 1000px) {
   .container .top-container .top-section p {
@@ -419,6 +419,23 @@ header nav a:hover {
   }
   .home-section #resources {
     padding-top: 80px;
+  }
+}
+@media (min-width: 500px) {
+  .cf {
+    display: flex;
+  }
+  .cf .inline33 {
+    display: inline-block;
+    width: calc(33.33% - 4px);
+  }
+  .cf .step {
+    vertical-align: top;
+  }
+  .cf p {
+    font-size: 20px;
+    color: #363636;
+    font-weight: normal;
   }
 }
 @media (min-width: 1000px) {

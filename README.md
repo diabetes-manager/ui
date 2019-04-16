@@ -5,7 +5,7 @@ user interface
 This project is a marketing/landing page for the Diabetes Manager web application, as well as an About Us page for our team.
 
 ### Deployment Link
-netlify.com/
+https://focused-joliot-901933.netlify.com/#
 
 ### Tools Used
 

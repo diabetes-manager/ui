@@ -218,7 +218,7 @@ header nav a:hover {
   width: 100%;
   padding-bottom: 20px;
   overflow: hidden;
-  background-color: #fef2f5;
+  background-color: white;
 }
 .container .top-container {
   background-color: #2592F2;
@@ -233,6 +233,11 @@ header nav a:hover {
   color: white;
   font-size: 3rem;
   padding-bottom: 40px;
+}
+@media (min-width: 500px) {
+  .container .top-container .top-section h1 {
+    font-size: 5rem;
+  }
 }
 @media (min-width: 1000px) {
   .container .top-container .top-section h1 {
@@ -266,7 +271,7 @@ header nav a:hover {
   }
 }
 .container .content-container {
-  background-color: #f8ecf8;
+  background-color: white;
   width: 100%;
 }
 .container .content-container .main-content {
@@ -278,22 +283,23 @@ header nav a:hover {
     width: 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10% 0% 10% 0%;
     margin-left: 15%;
   }
 }
-.container .content-container .main-content .meet {
-  margin-bottom: 0%;
-}
 .container .content-container .main-content h2 {
   margin-bottom: 8%;
 }
+@media (min-width: 500px) {
+  .container .content-container .main-content h2 {
+    font-size: 3.5rem;
+  }
+}
 @media (min-width: 1000px) {
   .container .content-container .main-content h2 {
-    font-size: 8rem;
+    font-size: 6rem;
     width: 100%;
-    margin-bottom: 60px;
   }
 }
 .container .content-container .main-content .main-content-div p {
@@ -322,7 +328,7 @@ header nav a:hover {
   }
 }
 .container .content-container.b {
-  background-color: #363636;
+  background-color: lightgrey;
 }
 .container button {
   height: 40px;
@@ -749,4 +755,131 @@ header nav a:hover {
     padding: 20px 5%;
     justify-content: flex-start;
   }
+}
+.tabs {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 70px;
+}
+.tabs .topics {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (min-width: 1000px) {
+  .tabs .topics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+.tabs .topics .tab {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  color: #2592F2;
+  height: 30px;
+  background-color: white;
+  margin: 20px 5px;
+  padding: 22px 24px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+.tabs .topics .tab:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #ff3366;
+}
+@media (min-width: 1000px) {
+  .tabs .topics .tab {
+    color: white;
+  }
+}
+.tabs .topics .tab p {
+  font-size: 2.5rem;
+}
+@media (min-width: 1000px) {
+  .tabs .topics .tab {
+    margin: 0 5px;
+  }
+}
+.tabs .topics .active-tab {
+  background-color: white;
+  color: #2592F2;
+}
+.tabs.about {
+  margin-top: 20px;
+}
+@media (min-width: 1000px) {
+  .tabs.about {
+    margin-top: 70px;
+  }
+}
+@media (min-width: 1000px) {
+  .tabs.about .topics.about {
+    flex-wrap: wrap;
+  }
+}
+.tabs.about .topics.about .tab {
+  margin: 10px 5px;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media (min-width: 1000px) {
+  .cards-container {
+    width: 1200px;
+  }
+}
+.cards-container .card {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 440px;
+  margin-bottom: 16px;
+  padding: 24px;
+  border-radius: 100px;
+}
+@media (min-width: 1000px) {
+}
+.cards-container .card p {
+  font-size: 2.4rem;
+  padding-top: 10px;
+}
+.cards-container .card h3 {
+  color: #2592F2;
+  border-bottom-color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+.cards-container .card .img-container {
+  margin: 30px 0 10px 0;
+  padding-right: 10px;
+  height: 240px;
+}
+.cards-container .card .img-container img {
+  width: 240px;
+  border-radius: 10px;
+}
+.card.about {
+  height: 370px;
 }

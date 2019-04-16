@@ -2,7 +2,7 @@
   width: 100%;
   padding-bottom: 20px;
   overflow: hidden;
-  background-color: @custom-bg;
+  background-color: white;
 
   .top-container {
     background-color: @custom-blue;
@@ -17,6 +17,10 @@
         color: white;
         font-size: 3rem;
         padding-bottom: 40px;
+
+        @media @tablet {
+          font-size: 5rem;
+        }
 
         @media @desktop {
           font-size: 9rem;
@@ -51,7 +55,7 @@
     }
   }
   .content-container {
-    background-color: @custom-lightpink;
+    background-color: white;
     width: 100%;
 
     .main-content {
@@ -62,22 +66,24 @@
         width: 75%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 10% 0% 10% 0%;
         margin-left: 15%;
-      }
-
-      .meet {
-        margin-bottom: 0%;
       }
 
       h2 {
         margin-bottom: 8%;
 
+        @media @tablet {
+          font-size: 3.5rem;
+          // width: 100%;
+          // margin-bottom: 60px;
+        }
+
         @media @desktop {
-          font-size: 8rem;
+          font-size: 6rem;
           width: 100%;
-          margin-bottom: 60px;
+          // margin-bottom: 60px;
         }
       }
 
@@ -113,7 +119,7 @@
   }
 
   .content-container.b {
-    background-color: @footer;
+    background-color: lightgrey;
   }
 
   button {

@@ -30,7 +30,7 @@
       p {
         padding: 0 0 20px 0;
         color: white;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
 
 
         @media @desktop {
@@ -179,10 +179,31 @@
       }
   }
 
+  .cf {
 
+    @media @tablet {
+      display: flex;
 
+      .inline33{
+        display: inline-block;
+        width: calc(33.33% - 4px);
+      
+    }
 
-
+          .step{
+              vertical-align: top;
+            
+          }
+  
+              p{   
+                  font-size: 20px;
+                  color: #363636;
+                  font-weight: normal;
+                
+             }
+    }
+    
+  }
 
     .inline33{
 
@@ -209,11 +230,13 @@
 
 
 .stepImage  {
+
   img {
     max-width: 50%;
     height: auto;
     padding: 20px 1% 18px;
-    }
+   
+  }
 
   @media @desktop {
     margin-bottom: 30px;
@@ -305,7 +328,8 @@
 .stats {
   margin-bottom: 40px;
   width: 100%;
-
+      
+  
   @media @desktop{
     display: inline-flex;
     margin-bottom: 130px;
@@ -513,4 +537,4 @@
           font-weight: 400;
         }
   }     
-}
+}this is correct.

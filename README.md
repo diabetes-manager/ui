@@ -9,4 +9,4 @@ Created style guide: https://company-66966.frontify.com/d/Gg49Aug7MGiL
 1. Run `npm run compile` to generate CSS
 
 ## Deployment
-Project is deployed at: https://compassionate-bohr-8a7372.netlify.com
+Project is deployed at: http://www.glucosiq.com

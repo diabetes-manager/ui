@@ -163,15 +163,18 @@
   background: linear-gradient(@primary-color 10%, @primary-light);
   color: @mono-light;
   font-size: 1.8rem;
+  position: relative;
 
-  // &:before {
-  //   content: '';
-  //   background: url(../assets/flair-2.svg) no-repeat;
-  //   height: 100%;
-  //   background-position: 100% 0%;
-  //   position: absolute;
-  //   width: 100vw;
-  // }
+  &:after {
+    content: '';
+    background: url(../assets/flair-3.svg) no-repeat;
+    height: 20%;
+    background-position: 0% 100%;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    z-index: -1;
+  }
 }
 
 .how-to-container {
@@ -213,5 +216,19 @@
   @media @desktop-up {
     align-self: center;
     width: 50%;
+  }
+}
+
+.partners-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px auto;
+
+  .logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
 }

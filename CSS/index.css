@@ -801,15 +801,11 @@ header nav a:hover {
 }
 @media (min-width: 1000px) {
   .tabs .topics .tab {
-    color: white;
-  }
-}
-.tabs .topics .tab p {
-  font-size: 2.5rem;
-}
-@media (min-width: 1000px) {
-  .tabs .topics .tab {
     margin: 0 5px;
+  }
+  .tabs .topics .tab p {
+    font-size: 2.5rem;
+    color: #2592F2;
   }
 }
 .tabs .topics .active-tab {

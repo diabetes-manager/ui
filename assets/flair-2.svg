@@ -1,16 +1,13 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 15">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 614.4 14.65">
   <defs>
     <style>
-      svg {
-        background: #fcfcfc;
-      }
       .cls-1 {
         fill: #2592f2;
       }
     </style>
   </defs>
-  <title>flair-2-svg [Converted]</title>
+  <title>flair-2</title>
   <path class="cls-1"
-    d="M293,13.37c-102.75,1-101-12.72-203-9C42.27,6.1,17.82,10,0,13.86V19.2H614.4V14.87c-17.73-3-60.52-9.31-122.73-11.17C396.21.85,387,12.43,293,13.37Z"
-    transform="translate(0 -3.25)" />
+    d="M293.25,10.93C189.92,12,191.68-2.63,89.11,1.33,42.34,3.13,17.8,7.12,0,11.13v3.66H614.4V12.16C595.47,8.84,553.32,2.53,493,.62,397-2.42,387.77,9.92,293.25,10.93Z"
+    transform="translate(0 -0.14)" />
 </svg>

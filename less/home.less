@@ -135,6 +135,11 @@
 
 .upsell {
   .Upsell(left, center);
+  width: 25%;
+
+  [class$="__content"] {
+    min-height: 120px;
+  }
 
   &--reverse {
     .Upsell(right, center);
@@ -158,6 +163,15 @@
   background: linear-gradient(@primary-color 10%, @primary-light);
   color: @mono-light;
   font-size: 1.8rem;
+
+  // &:before {
+  //   content: '';
+  //   background: url(../assets/flair-2.svg) no-repeat;
+  //   height: 100%;
+  //   background-position: 100% 0%;
+  //   position: absolute;
+  //   width: 100vw;
+  // }
 }
 
 .how-to-container {

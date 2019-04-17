@@ -135,8 +135,7 @@
 
 .upsell {
   .Upsell(left, center);
-  width: 25%;
-
+  
   [class$="__content"] {
     min-height: 120px;
   }
@@ -149,9 +148,10 @@
       padding-right: 15px;
     }
   }
-
+  
   @media @desktop-up {
     .Upsell(top, center, center);
+    width: 25%;
 
     &--reverse {
       .Upsell(top, center, center);
@@ -230,5 +230,6 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    overflow: hidden;
   }
 }

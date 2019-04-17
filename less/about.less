@@ -1,16 +1,33 @@
 .about-hero {
   height: 300px;
   background: @primary-color;
+  
+  .hero-waves {
+    @media @desktop-up {
+      background: url(../assets/blog-flair.svg) no-repeat;
+      top: -1px;
+      height: 12vw;
+    }
+  }
+
+  @media @desktop-up {
+    margin-bottom: 4vw;
+  }
 }
 
 .tabs {
   width: 100%;
+  margin-top: 3vh;
 
   &__roles {
     display: flex;
     justify-content: space-around;
     height: 80px;
     align-items: center;
+  }
+
+  @media @tablet-up {
+    margin-top: 0;
   }
 }
 
@@ -20,6 +37,8 @@
   font-weight: bold;
   border: 1px solid @primary-dark;
   color: @primary-dark;
+  background: @mono-light;
+  cursor: pointer;
   
   &--active {
     background: @primary-dark;

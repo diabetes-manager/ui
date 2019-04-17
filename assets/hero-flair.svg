@@ -1,0 +1,35 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 614.4 196.29">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color: #2592f2; stop-opacity: 1" />
+      <stop offset="20%" style="stop-color: #2592f2; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #1f72d1; stop-opacity: 1" />
+    </linearGradient>
+    <style>
+      svg {
+        background: #fcfcfc;
+      }
+      .cls-1 {
+        fill: #2592f2
+      }
+
+      .cls-1,
+      .cls-2 {
+        <!-- fill-rule: evenodd; -->
+      }
+      .cls-2 {
+        fill: #64B2F6;
+      }
+    </style>
+  </defs>
+  <title>hero-image-svg4</title>
+  <path class="cls-1"
+    d="M0,196.19a162.05,162.05,0,0,0,31.92-2c42.19-6.95,63.61-28.38,97.92-45.36C165.56,131.12,207.29,123.55,247,125c52.31,2,79,21.65,131.28,25,44.44,2.81,83.37-4.07,115.2-17.76,32.57-14,57.24-32.82,96.24-40.08a201.94,201.94,0,0,1,24.72-3V0H0Z"
+    transform="translate(0 0)" />
+  <path class="cls-2"
+    d="M493.44,132.24c6.53-2.81,12.74-5.81,18.81-8.87-8.76-3.11-16.39-5.73-22.41-7.21-24.21-6-82-7.32-141.36,5.28a413.1,413.1,0,0,0-46.32,12.67c23.46,6.34,45.36,13.94,76.08,15.89C422.68,152.81,461.61,145.93,493.44,132.24Z"
+    transform="translate(0 0)" />
+  <path class="cls-2"
+    d="M31.92,194.16c27.71-4.56,46.47-15.37,65.79-27.07-19.56-7.37-38.4-14.92-57.15-17.57A239.67,239.67,0,0,0,0,147.3v48.89A162.05,162.05,0,0,0,31.92,194.16Z"
+    transform="translate(0 0)" />
+</svg>

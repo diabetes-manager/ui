@@ -10,115 +10,118 @@
 </head>
 
 <body>
-
-  <header class='header header--full-bleed'>
-    <div class="container navigation-container">
-      <div class='logo'>
-        Glucose IQ
+<div class="page-wrapper">
+  
+    <header class='header header--full-bleed'>
+      <div class="container navigation-container">
+        <div class='logo'>
+          <a href="index.html">Glucose IQ</a>
+        </div>
+        <nav class='nav'>
+          <ul class="nav__list">
+            <li><a href="about.html" class="nav__link">About Us</a></li>
+            <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="#" class="nav__link nav__link--emphasize">Get Started</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class='nav'>
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Home</a></li>
-          <li><a href="about.html" class="nav__link">About Us</a></li>
-          <li><a href="#" class="nav__link nav__link--emphasize">Get Started</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero hero--full-bleed about-hero">
-    <div class="container hero-container">
-      <h1 class="hero__title">Meet the Glucose IQ team.</h1>
-    </div>
-  </section>
-
-  <div class="container tabs-container">
-    <section class="tabs">
-      <div class="tabs__roles">
-        <div data-tab="all" class="role__tab role__tab--active"></div>
-        <div data-tab="user-interface" class="role__tab"></div>
-        <div data-tab="android" class="role__tab"></div>
-        <div data-tab="front-end" class="role__tab"></div>
-        <div data-tab="back-end" class="role__tab"></div>
-        <div data-tab="data-science" class="role__tab"></div>
+    </header>
+  
+    <section class="hero hero--full-bleed about-hero">
+      <div class="container hero-container">
+        <h1 class="hero__title">Meet the Glucose IQ team.</h1>
       </div>
+      <div class="hero-waves"></div>
     </section>
+  
+    <div class="container tabs-container">
+      <section class="tabs">
+        <div class="tabs__roles">
+          <div data-tab="all" class="role__tab role__tab--active"></div>
+          <div data-tab="user-interface" class="role__tab"></div>
+          <div data-tab="android" class="role__tab"></div>
+          <div data-tab="front-end" class="role__tab"></div>
+          <div data-tab="back-end" class="role__tab"></div>
+          <div data-tab="data-science" class="role__tab"></div>
+        </div>
+      </section>
+    </div>
+  
+  
+    <div class="container members-container">
+      <section class="members">
+        <!-- Todo map over array of team members to generate an array of members that can append here -->
+        <div class="member" data-tab="user-interface">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+          <!-- todo: append role here with random adjective after E.g. "user interface rockstar" "back end powerhouse"-->
+        </div>
+        <div class="member" data-tab="user-interface">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+        <div class="member" data-tab="back-end">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+        <div class="member" data-tab="back-end">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+        
+        <div class="member" data-tab="data-science">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+        <div class="member" data-tab="data-science">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+        <div class="member" data-tab="data-science">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+        <div class="member" data-tab="front-end">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+        <div class="member" data-tab="android">
+          <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
+          <div class="member__info">
+            <h3 class="member__info__name">FirstName LastName</h3>
+            <span class="member__info__role">User Interface</span>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
-
-
-  <div class="container members-container">
-    <section class="members">
-      <!-- Todo map over array of team members to generate an array of members that can append here -->
-      <div class="member" data-tab="user-interface">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-        <!-- todo: append role here with random adjective after E.g. "user interface rockstar" "back end powerhouse"-->
-      </div>
-      <div class="member" data-tab="user-interface">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-      <div class="member" data-tab="back-end">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-      <div class="member" data-tab="back-end">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-      
-      <div class="member" data-tab="data-science">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-      <div class="member" data-tab="data-science">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-      <div class="member" data-tab="data-science">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-      <div class="member" data-tab="front-end">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-      <div class="member" data-tab="android">
-        <img src="https://fakeimg.pl/150x150" alt="FirstName's Beautiful Face">
-        <div class="member__info">
-          <h3 class="member__info__name">FirstName LastName</h3>
-          <span class="member__info__role">User Interface</span>
-        </div>
-      </div>
-    </section>
-  </div>
-
+  
   <footer class="footer">
-    <div class="copyright">&copy; Insto 2019</div>
+      <div class="copyright">&copy; Glucos IQ&trade; 2019</div>
   </footer>
   <script src="./js/Tabs.js"></script>
 </body>

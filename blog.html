@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GlucosIQ&trade;</title>
   <link rel="stylesheet" href="./css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </head>
 
 <body>
@@ -52,6 +53,175 @@
     <div class="copyright">&copy; 2019 GlucosIQ&trade; Al rights reserved.</div>
   </footer>
   <!-- <script src="./js/Tabs.js"></script> -->
+  <script>
+    class Animation {
+      constructor(props) {
+        this.element = props.element;
+        this.modifier = props.modifier;
+        this.fromPlaceholder;
+        this.toPlaceholder;
+      }
+      
+      deeply(params, parent, callback) {
+        let result = callback(element, ...params);
+        if ( element.children.length === 0 ) {
+          return result;
+        }
+        
+        for ( let i = 0; i < element.children.length; i += 1 ) {
+          result[element.children[i]] = this.deeply([], element.children[i], callback);
+        }
+
+        let obj = getCoords(element, topLevel);
+        if ( element.children.length === 0 ) {
+          return obj;
+        }
+        for ( let i = 0; i < element.children.length; i += 1 ) {
+          obj[element.children[i]] = getDeepCoords(element.children[i]);
+        }
+        return obj;
+      }
+
+      transitionTo(target) {
+        let fromCoords = getDeepCoords(target);
+        let fromPlaceholder = target.cloneNode('deep');
+
+        fromPlaceholder.style.width = target.offsetWidth + 'px';
+        fromPlaceholder.style.height = target.offsetHeight + 'px';
+        fromPlaceholder.style.visibility = 'hidden';
+        fromPlaceholder.classList.add(this.element.slice(1) + '-placeholder');
+
+        let toPlaceholder = event.target.cloneNode('deep');
+        toPlaceholder.classList.add(this.modifier.slice(1));
+        toPlaceholder.style.visibility = 'hidden';
+        event.target.after(toPlaceholder);
+        let toCoords = getDeepCoords(toPlaceholder, true);
+
+        event.target.style.maxWidth = '100vw';
+        event.target.style.maxHeight = '100vh';
+        event.target.after(fromPlaceholder);
+
+        animateDeep(target, fromCoords, toCoords);
+        window.setTimeout(() => {
+          toPlaceholder.style = '';
+          target.remove();
+        }, 330);
+      }
+
+      transitionFrom() {
+
+      }
+    }
+
+let postAnimation = new Animation({
+  element: '.post',
+  modifier: '.post--focused',
+});
+
+document.addEventListener('click', (event) => {
+  console.log(event.target);
+  if (event.target.matches('.close-post')) {
+    closePost();
+    return;
+  }
+
+  if ( !event.target.matches('.post') || event.target.matches('.post--focused') ) return;
+
+  console.log('post clicked');
+  let fromCoords = getDeepCoords(event.target, true);
+  let fromPlaceholder = event.target.cloneNode('deep');
+
+  fromPlaceholder.style.width = event.target.offsetWidth + 'px';
+  fromPlaceholder.style.height = event.target.offsetHeight + 'px';
+  fromPlaceholder.style.visibility = 'hidden';
+  fromPlaceholder.classList.add('post--placeholder');
+
+  let toPlaceholder = event.target.cloneNode('deep');
+  toPlaceholder.classList.add('post--focused');
+  toPlaceholder.style.visibility = 'hidden';
+  event.target.after(toPlaceholder);
+  let toCoords = getDeepCoords(toPlaceholder, true);
+
+  event.target.style.maxWidth = '100vw';
+  event.target.after(fromPlaceholder);
+
+  animateDeep(event.target, fromCoords, toCoords);
+  document.querySelector('.close-post').style.visibility = 'visible';
+  document.querySelector('.close-post').style.opacity = '1';
+
+  window.setTimeout(() => {
+    toPlaceholder.style = '';
+    toPlaceholder.querySelector('img').src = 'https://fakeimg.pl/1400x600';
+    event.target.remove();
+  }, 330);
+});
+
+const animateDeep = (element, from, to) => {
+  element.style.position = 'fixed';
+  element.style.marginTop = '0px';
+  TweenMax.fromTo(element, 0.33, {
+    top: from.top,
+    left: from.left,
+    width: from.width,
+    height: from.height,
+  }, {
+    top: to.top,
+    left: to.left,
+    width: to.width,
+    height: to.height,
+  });
+
+  for ( let i = 0; i < element.children.length; i += 1 ) {
+    animateDeep(element.children[i], from[element.children[i]], to[element.children[i]]);
+  }
+}
+
+const getDeepCoords = (element, topLevel = false) => {
+  let obj = getCoords(element, topLevel);
+  if ( element.children.length === 0 ) {
+    return obj;
+  }
+  for ( let i = 0; i < element.children.length; i += 1 ) {
+    obj[element.children[i]] = getDeepCoords(element.children[i]);
+  }
+  return obj;
+}
+
+const getCoords = (element, topLevel) => {
+  let top = element.getBoundingClientRect().top;
+  let left = element.getBoundingClientRect().left;
+  return {
+    top: top,
+    left: left,
+    width: element.offsetWidth,
+    height: element.offsetHeight
+  }
+}
+
+// TODO: Switch deep coords logic so top level is true, then in function for children pass false
+document.addEventListener('keyup', (event) => {
+  if (!event.keyCode === 27 || !document.querySelector('.post--focused')) return;
+  closePost();
+});
+
+const closePost = () => {
+  let element = document.querySelector('.post--focused');
+  let placeholder = document.querySelector('.post--placeholder');
+
+  let fromCoords = getDeepCoords(element, true);
+  let toCoords = getDeepCoords(placeholder, true);
+
+  document.querySelector('.close-post').style.opacity = '0';
+
+  animateDeep(element, fromCoords, toCoords);
+  window.setTimeout(() => {
+    document.querySelector('.close-post').style.visibility = 'visible';
+    placeholder.style = '';
+    placeholder.classList.remove('post--placeholder');
+    element.remove();
+  }, 330);
+}
+</script>
 </body>
 
 </html>

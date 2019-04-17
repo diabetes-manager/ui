@@ -74,6 +74,7 @@
   max-width: 700px;
   justify-content: center;
   align-items: center;
+  padding: 40px 0;
 
   h2 {
     margin-bottom: 30px;
@@ -100,6 +101,23 @@
     letter-spacing: 0.25px;
     font-size: 2rem;
     line-height: 1.5;
+    margin: 15px 0;
+  }
+}
+
+.approach {
+  background: linear-gradient(@primary-color, @primary-dark);
+  color: @mono-light;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: url(../assets/flair-1.svg) no-repeat;
+    width: 100vw;
+    z-index: 1;
+    background-position: 0% 100%;
+    transform: rotate(180deg);
   }
 }
 

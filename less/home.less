@@ -76,25 +76,25 @@
   align-items: center;
   padding: 40px 0;
 
-  h2 {
-    margin-bottom: 30px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    position: relative;
+  // h2 {
+  //   margin-bottom: 30px;
+  //   font-weight: 600;
+  //   letter-spacing: 2px;
+  //   position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      width: 100px;
-      margin-left: -50px;
-      height: 4px;
-      background: linear-gradient(90deg, @highlight-dark, @highlight-color);
-      border-radius: 3px;
-      display: block;
-      bottom: -15px;
-    }
-  }
+  //   &:after {
+  //     content: '';
+  //     position: absolute;
+  //     left: 50%;
+  //     width: 100px;
+  //     margin-left: -50px;
+  //     height: 4px;
+  //     background: linear-gradient(90deg, @highlight-dark, @highlight-color);
+  //     border-radius: 3px;
+  //     display: block;
+  //     bottom: -15px;
+  //   }
+  // }
 
   p {
     text-align: center;
@@ -184,7 +184,6 @@
     width: 100vw;
     bottom: 0;
     z-index: -1;
-    // left: -5vw;
     transform: translateY(2px)
   }
 }
@@ -193,6 +192,7 @@
   flex-direction: column;
   padding-top: 30px;
   max-width: 700px;
+  align-items: center;
 
   @media @phone-up {
     width: 75%;
@@ -209,14 +209,31 @@
 .step {
   .Upsell(left, left);
 
+  &__content {
+    padding-left: 0;
+    width: 90%;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
   @media @desktop-up {
     .Upsell(top, left);
   }
 
   // DEBUG: This should be on desktop breakpoint
-  &__content {
-    padding-left: 80px;
-    width: 80%;
+  // &__content {
+    // padding-left: 80px;
+    // width: 80%;
+  // }
+
+  img {
+    width: 100px;
+    height: 100px;
+    opacity: 0.15;
+    z-index: -1;
+    margin-right: -50px;
   }
 
 }
@@ -243,5 +260,25 @@
     display: flex;
     justify-content: space-around;
     overflow: hidden;
+  }
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    height: 4px;
+    background: linear-gradient(90deg, @highlight-dark, @highlight-color);
+    border-radius: 3px;
+    display: block;
+    bottom: -15px;
   }
 }

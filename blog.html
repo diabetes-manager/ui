@@ -221,7 +221,6 @@ const getCoords = (element, topLevel) => {
   }
 }
 
-// TODO: Switch deep coords logic so top level is true, then in function for children pass false
 document.addEventListener('keyup', (event) => {
   if (!event.keyCode === 27 || !document.querySelector('.post--focused')) return;
   closePost();

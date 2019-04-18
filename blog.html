@@ -22,7 +22,7 @@
           <ul class="nav__list">
             <li><a href="about.html" class="nav__link">About Us</a></li>
             <li><a href="blog.html" class="nav__link">Case Studies</a></li>
-            <li><a href="#" class="nav__link nav__link--emphasize">Sign Up</a></li>
+            <li><a href="https://glucosiq.net/" class="nav__link nav__link--emphasize">Sign Up</a></li>
           </ul>
         </nav>
       </div>
@@ -30,21 +30,34 @@
 
     <section class="hero hero--full-bleed about-hero">
       <div class="container hero-container">
+        <div class="close-post">x</div>
         <h1 class="hero__title">GlucosIQ&trade; Case Studies & Resources</h1>
       </div>
       <div class="hero-waves"></div>
     </section>
 
     <section class="container posts-container">
+      
       <div class="post">
-        <img src="https://fakeimg.pl/400x200" alt="">
-        <h3>Post Title</h3>
-        <p>Post Content Blurb</p>
+        <img src="./assets/kitten-post1-sm.jpg"  data-src="./assets/kitten-post1-lg.jpg" alt="">
+        <div class="post__content">
+          <h3>Glycemia improvement in People with T2D</h3>
+          <div class="post__blurb">
+            <p>Insulin management can be an arduous process for a person with diabetes (PWD). While mobile health technologies (mHealth) have emerged to help PWDs track blood glucose (BG), whether mHealth tools can be effective for insulin management and dose titration remains unclear.</p>
+            <p>In this feasibility study, we evaluated the extent to which an mHealth app for long-acting insulin (LAI) dose adjustment can help people with type 2 diabetes make appropriate titration adjustments and improve their glycemic status.</p>
+          </div>
+        </div>
       </div>
       <div class="post">
-        <img src="https://fakeimg.pl/400x200" alt="">
-        <h3>Post Title</h3>
-        <p>Post Content Blurb Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perferendis quaerat, ea, quam maiores sunt consequatur neque ducimus dolorem laboriosam iusto minus totam qui suscipit? Accusantium inventore esse provident quidem.</p>
+        <img src="./assets/kitten-post2-sm.jpg"  data-src="./assets/kitten-post2-lg.jpg" alt="">
+        <div class="post__content">
+          <h3>GlucosIQ: Trends and Patterns</h3>
+          <div class="post__blurb">
+            <p>We recently launched a redesigned version of the GlucosIQ Mobile App with pattern recognition features that will tell you what time of day you frequently go high or low, which day of the week you had your best blood glucose control and how your blood glucose data compares to the last time period.</p>
+            <p>With easier navigation to help you find the information that you’re looking for and a fresh new look, the new GlucosIQ Mobile App is packed with insights to help you improve your diabetes health outcomes in a way that fits your lifestyle.</p>
+            <p>Join GlucosIQ's Product Manager, Stephen Bondor, as he walks you through how to use the new GlucosIQ Mobile App so you can make the most of the new pattern recognition features to improve your diabetes management.</p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -52,7 +65,6 @@
   <footer class="footer">
     <div class="copyright">&copy; 2019 GlucosIQ&trade; Al rights reserved.</div>
   </footer>
-  <!-- <script src="./js/Tabs.js"></script> -->
   <script>
     class Animation {
       constructor(props) {
@@ -119,7 +131,6 @@ let postAnimation = new Animation({
 });
 
 document.addEventListener('click', (event) => {
-  console.log(event.target);
   if (event.target.matches('.close-post')) {
     closePost();
     return;
@@ -127,7 +138,7 @@ document.addEventListener('click', (event) => {
 
   if ( !event.target.matches('.post') || event.target.matches('.post--focused') ) return;
 
-  console.log('post clicked');
+  fixHeader();
   let fromCoords = getDeepCoords(event.target, true);
   let fromPlaceholder = event.target.cloneNode('deep');
 
@@ -151,10 +162,22 @@ document.addEventListener('click', (event) => {
 
   window.setTimeout(() => {
     toPlaceholder.style = '';
-    toPlaceholder.querySelector('img').src = 'https://fakeimg.pl/1400x600';
+    toPlaceholder.querySelector('img').src = toPlaceholder.querySelector('img').dataset.src;
     event.target.remove();
   }, 330);
 });
+
+const fixHeader = () => {
+  document.querySelector('body').classList.toggle('body--fixed')
+  
+  var scrollStep = -window.scrollY / (250 / 15),
+    scrollInterval = setInterval(function(){
+    if ( window.scrollY != 0 ) {
+      window.scrollBy( 0, scrollStep );
+    }
+    else clearInterval(scrollInterval); 
+  }, 15);
+};
 
 const animateDeep = (element, from, to) => {
   element.style.position = 'fixed';
@@ -205,6 +228,7 @@ document.addEventListener('keyup', (event) => {
 });
 
 const closePost = () => {
+  fixHeader();
   let element = document.querySelector('.post--focused');
   let placeholder = document.querySelector('.post--placeholder');
 
